@@ -18,6 +18,7 @@ public class Ping {
 
     @GetMapping(path = "/ping")
     public ResponseEntity ping(){
+        System.out.println(url);
         return ResponseEntity.ok("All ok");
     }
 
