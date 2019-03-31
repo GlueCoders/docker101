@@ -1,0 +1,10 @@
+version: "3"
+services:
+  web:
+    build: .
+    depends_on:
+      - mongo
+    ports:
+      - "8081:8081"
+  mongo:
+    image: mongo:latest
