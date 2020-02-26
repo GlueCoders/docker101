@@ -1,37 +1,43 @@
-## Welcome to GitHub Pages
+## Docker
 
-You can use the [editor on GitHub](https://github.com/GlueCoders/docker101/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Docker helps to deliver software in a container which can be deployed on any OS machine having docker. This removes the dependency on system requirements as those are captured in the container itself.  
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+### Terminology  
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+- Image: This is the output of docker build and has all the information about what all software components goes into the package.
+- Container: This is the output of docker run and is built out of image.
 
-```markdown
-Syntax highlighted code block
+### Build Images
 
-# Header 1
-## Header 2
-### Header 3
+docker build 
 
-- Bulleted
-- List
 
-1. Numbered
-2. List
+### Searching Images  
+```
+docker search alpine
+```  
+### Run Images - Containers
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```
+docker container run -itd --name demo alpine ash
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+i stands for interactive mode( to have stdin connected to terminal of container)
+d for detached mode
+t for virtual terminal linked to container
+name gives the container name
+alpine is the image name 
+ash is the command run within the container
 
-### Jekyll Themes
+### See Logs
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/GlueCoders/docker101/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
-### Support or Contact
+### Inspect
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+### Run something inside a container
+### 
+### Networking
+
+
+###
