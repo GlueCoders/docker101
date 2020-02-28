@@ -40,12 +40,12 @@ docker image rm image_name
 docker container run -itd -p 80:80 --name demo alpine ash
 ```
 
-i stands for interactive mode( to have stdin connected to terminal of container)
-d for detached mode
-t for virtual terminal linked to container
-name gives the container name
-alpine is the image name 
-ash is the command run within the container
+i stands for interactive mode( to have stdin connected to terminal of container)  
+d for detached mode  
+t for virtual terminal linked to container  
+name gives the container name  
+alpine is the image name   
+ash is the command run within the container  
 
 ### See Logs
 ```
@@ -60,6 +60,11 @@ docker container inspect container_name
 ### Stopping Container
 ```
 docker container stop container_name
+```
+
+### Restarting a container
+```
+docker restart container_name
 ```
 
 ### Removing Container
@@ -77,11 +82,39 @@ docker container prune
 docker container exec -it container_name /bin/bash
 ```
 
+### Listing all containers
+```
+docker container ls
+```
+
 ## Networking
+
 ### Creating a network
 ```
 docker network create network_name
 ```
 
+### Connecting a container to a network
+```
+docker network connect network_name container_name
+```  
 
-###
+### Disconnect a container to a network
+```
+docker network disconnect network_name container_name
+```
+
+### List all networks
+```
+docker network ls
+```
+
+### Remove a network
+```
+docker network rm network_name
+```
+
+### Inspecting a network
+```
+docker network inspect network_name
+```
